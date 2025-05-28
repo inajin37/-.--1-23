@@ -1,13 +1,23 @@
+/* Подключение Tailwind CSS */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Импорт Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&family=Anta&display=swap');
+
+/* Базовые стили */
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h1, h2, h3, h4, h5, h6, p, span, div {
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+.font-anta {
+  font-family: 'Anta', sans-serif;
 }
