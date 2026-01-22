@@ -94,10 +94,69 @@ const MainPage = ({ userId, setUserId, username, setUsername }) => {
   const [firstName, lastName] = (username || 'Гость').split(' ');
 
   return (
-    <div className={`min-h-screen flex justify-center items-center ${theme === 'dark' ? 'bg-[#080808] text-white' : 'bg-gray-100 text-black'} font-yanone`}>
+    <div className={`min-h-screen flex justify-center items-center ${theme === 'dark' ? 'bg-[#0e1426]  text-white' : 'bg-gray-100 text-black'} font-yanone`}>
       <div className="w-full max-w-[1165px] flex flex-col gap-4 p-4">
         <Header showNav={true} isRegistered={isRegistered} username={username} className="shadow-md" />
-        <section className={`${theme === 'dark' ? 'bg-[#1E1E1E]' : 'bg-white shadow-md'} rounded-xl p-5`}>
+        <section className={`${theme === 'dark' ? 'bg-[#0d0361] ' : 'bg-white shadow-md'} rounded-sm p-5 flex flex-col md:flex-row justify-between`}>
+          <div className="font-yanone max-w-[500px] text-left mb-4 md:mb-0">
+            <h3 className="font-yanone text-5xl mb-4">Календарь</h3>
+            <p className="font-yanone text-2xl">
+              В этом разделе вы можете смотреть свой прогресс. Отмечая все дни когда вы занимались спортом. Это поможет вам понять ваш прогресс, дисциплину и поменять план тренировок.
+            </p>
+            <Link
+              to="/calendar"
+              className={`${theme === 'dark' ? 'bg-[#FFD700] hover:bg-[#0d0361]  hover:border-[#FFD700]' : 'bg-[#8f2429]  hover:bg-white hover:border-[#8f2429]  hover:text-black'} rounded-sm px-4 py-2 font-yanone text-xl transition-all border-2 border-transparent mt-4 inline-block text-white`}
+            >
+              Перейти
+            </Link>
+          </div>
+          <img
+            src="/images/calendar.jpg"
+            alt="Календарь тренировок"
+            className="w-[500px] h-[300px] rounded-sm object-cover"
+          />
+        </section>
+        <section className={`${theme === 'dark' ? 'bg-[#0d0361] ' : 'bg-white shadow-md'} rounded-sm p-5 flex justify-between`}>
+          <img
+            src="/images/workout-plan.png"
+            alt="План тренировок"
+            className="w-[500px] h-[300px] rounded-sm object-cover"
+            onClick={() => setIsModalOpen('exercises')}
+          />
+          <div className="font-yanone max-w-[500px] text-right">
+            <h3 className="font-yanone text-5xl mb-4">План тренировок</h3>
+            <p className="font-yanone text-2xl">
+              В этом разделе вы можете планировать свои тренировки. Записывая их как заметки по дням. Что помогает чётко знать что вам нужно делать в тот или иной день.
+            </p>
+            <Link
+              to="/plan"
+              className={`${theme === 'dark' ? 'bg-[#FFD700] hover:bg-[#0d0361]  hover:border-[#FFD700]' : 'bg-[#8f2429]  hover:bg-white hover:border-[#8f2429]  hover:text-black'} rounded-sm px-4 py-2 font-yanone text-xl transition-all border-2 border-transparent mt-4 inline-block text-white`}
+            >
+              Перейти
+            </Link>
+          </div>
+        </section>
+        <section className={`${theme === 'dark' ? 'bg-[#0d0361] ' : 'bg-white shadow-md'} rounded-sm p-5 flex justify-between`}>
+          <div className="font-yanone max-w-[500px]">
+            <h3 className="font-yanone text-5xl mb-4">Упражнения</h3>
+            <p className="font-yanone text-2xl">
+              В этом разделе вы можете посмотреть видео ролики с упражнениями. И составить свой план тренировок. Это поможет качественно составить план для хорошего развития.
+            </p>
+            <Link
+              to="/exercises"
+              className={`${theme === 'dark' ? 'bg-[#FFD700]hover:bg-[#0d0361]  hover:border-[#FFD700]' : 'bg-[#8f2429]  hover:bg-white hover:border-[#8f2429]  hover:text-black'} rounded-sm px-4 py-2 font-yanone text-xl transition-all border-2 border-transparent mt-4 inline-block text-white`}
+            >
+              Перейти
+            </Link>
+          </div>
+          <img
+            src="/images/exer.jpg"
+            alt="Упражнения"
+            className="w-[500px] h-[300px] rounded-sm object-cover"
+            onClick={() => setIsModalOpen('exercises')}
+          />
+        </section>
+        <section className={`${theme === 'dark' ? 'bg-[#0d0361] ' : 'bg-white shadow-md'} rounded-sm p-5`}>
           <div className="flex justify-between mb-8">
             <div className="font-yanone text-5xl flex flex-col">
               <span>{firstName}</span>
@@ -110,7 +169,7 @@ const MainPage = ({ userId, setUserId, username, setUsername }) => {
           </div>
           <div className="flex justify-center gap-5 mb-8">
             <div
-              className={`${theme === 'dark' ? 'border-purple-600' : 'border-[#3440EB]'} border-2 rounded-3xl w-[300px] h-[250px] text-center p-4 flex flex-col items-center justify-center cursor-pointer`}
+              className={`${theme === 'dark' ? 'border-[#FFD700]' : 'border-[#8f2429] '} border-2 rounded-sm w-[300px] h-[250px] text-center p-4 flex flex-col items-center justify-center cursor-pointer`}
               onClick={() => setIsModalOpen('height')}
             >
               <p className="font-yanone text-6xl mt-10">Рост</p>
@@ -122,7 +181,7 @@ const MainPage = ({ userId, setUserId, username, setUsername }) => {
               <p className="font-yanone text-2xl mt-2">см</p>
             </div>
             <div
-              className={`${theme === 'dark' ? 'border-purple-600' : 'border-[#3440EB]'} border-2 rounded-3xl w-[300px] h-[250px] text-center p-4 flex flex-col items-center justify-center cursor-pointer`}
+              className={`${theme === 'dark' ? 'border-[#FFD700]' : 'border-[#8f2429] '} border-2 rounded-sm w-[300px] h-[250px] text-center p-4 flex flex-col items-center justify-center cursor-pointer`}
               onClick={() => setIsModalOpen('weight')}
             >
               <p className="font-yanone text-6xl mt-10">Вес</p>
@@ -134,7 +193,7 @@ const MainPage = ({ userId, setUserId, username, setUsername }) => {
               <p className="font-yanone text-2xl mt-2">кг</p>
             </div>
             <div
-              className={`${theme === 'dark' ? 'border-purple-600' : 'border-[#3440EB]'} border-2 rounded-3xl w-[300px] h-[250px] text-center p-4 flex flex-col items-center justify-center cursor-pointer`}
+              className={`${theme === 'dark' ? 'border-[#FFD700]' : 'border-[#8f2429] '} border-2 rounded-sm w-[300px] h-[250px] text-center p-4 flex flex-col items-center justify-center cursor-pointer`}
               onClick={() => setIsModalOpen('calories')}
             >
               <p className="font-yanone text-6xl mt-10">Ккал</p>
@@ -147,7 +206,7 @@ const MainPage = ({ userId, setUserId, username, setUsername }) => {
           </div>
           {isModalOpen && (
             <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-              <div className={`${theme === 'dark' ? 'bg-[#1E1E1E] text-white' : 'bg-white text-black'} rounded-xl p-6 w-[400px]`}>
+              <div className={`${theme === 'dark' ? 'bg-[#0d0361]  text-white' : 'bg-white text-black'} rounded-sm p-6 w-[400px]`}>
                 <h3 className="font-yanone text-3xl mb-4">
                   {isModalOpen === 'height' ? 'Изменить рост' : isModalOpen === 'weight' ? 'Изменить вес' : isModalOpen === 'calories' ? 'Изменить калории' : 'Изменить количество упражнений'}
                 </h3>
@@ -161,19 +220,19 @@ const MainPage = ({ userId, setUserId, username, setUsername }) => {
                     else if (isModalOpen === 'calories') setCalories(value);
                     else setExercisesCount(value);
                   }}
-                  className={`${theme === 'dark' ? 'bg-[#1E1E1E] text-white border-purple-600' : 'bg-white text-black border-[#3440EB]'} border-2 rounded-xl p-2 w-full mb-4`}
+                  className={`${theme === 'dark' ? 'bg-[#0d0361]  text-white border-[#FFD700]' : 'bg-white text-black border-[#8f2429] '} border-2 rounded-sm p-2 w-full mb-4`}
                   placeholder="Введите значение"
                 />
                 <div className="flex justify-end gap-2">
                   <button
                     onClick={() => setIsModalOpen(null)}
-                    className={`${theme === 'dark' ? 'bg-purple-600 hover:bg-[#1E1E1E] hover:border-purple-600'  : 'bg-[#3440EB] hover:text-black hover:bg-white hover: border-[#3440EB]'} rounded-xl px-4 py-2 text-white transition-all border-2 border-transparent`}
+                    className={`${theme === 'dark' ? 'bg-[#FFD700]hover:bg-[#0d0361]  hover:border-[#FFD700]'  : 'bg-[#8f2429]  hover:text-black hover:bg-white hover: border-[#8f2429] '} rounded-sm px-4 py-2 text-white transition-all border-2 border-transparent`}
                   >
                     Отмена
                   </button>
                   <button
                     onClick={() => handleSave(isModalOpen)}
-                    className={`${theme === 'dark' ? 'bg-purple-600 hover:bg-[#1E1E1E] hover:border-purple-600'  : 'bg-[#3440EB] hover:text-black hover:bg-white hover: border-[#3440EB]'} rounded-xl px-4 py-2 text-white transition-all border-2 border-transparent`}
+                    className={`${theme === 'dark' ? 'bg-[#FFD700]hover:bg-[#0d0361]  hover:border-[#FFD700]'  : 'bg-[#8f2429]  hover:text-black hover:bg-white hover: border-[#8f2429] '} rounded-sm px-4 py-2 text-white transition-all border-2 border-transparent`}
                   >
                     Сохранить
                   </button>
@@ -182,71 +241,11 @@ const MainPage = ({ userId, setUserId, username, setUsername }) => {
             </div>
           )}
         </section>
-        <section className={`${theme === 'dark' ? 'bg-[#1E1E1E]' : 'bg-white shadow-md'} rounded-xl p-5 flex flex-col md:flex-row justify-between`}>
-          <div className="font-yanone max-w-[500px] text-left mb-4 md:mb-0">
-            <h3 className="font-yanone text-5xl mb-4">Календарь</h3>
-            <p className="font-yanone text-2xl">
-              В этом разделе вы можете смотреть свой прогресс. Отмечая все дни когда вы занимались спортом. Это поможет вам понять ваш прогресс, дисциплину и поменять план тренировок.
-            </p>
-            <Link
-              to="/calendar"
-              className={`${theme === 'dark' ? 'bg-purple-600 hover:bg-[#1E1E1E] hover:border-purple-600' : 'bg-[#3440EB] hover:bg-white hover:border-[#3440EB] hover:text-black'} rounded-xl px-4 py-2 font-yanone text-xl transition-all border-2 border-transparent mt-4 inline-block text-white`}
-            >
-              Перейти
-            </Link>
-          </div>
-          <img
-            src="/images/calendar.jpg"
-            alt="Календарь тренировок"
-            className="w-[500px] h-[300px] rounded-3xl object-cover"
-          />
-        </section>
-        <section className={`${theme === 'dark' ? 'bg-[#1E1E1E]' : 'bg-white shadow-md'} rounded-xl p-5 flex justify-between`}>
-          <img
-            src="/images/workout-plan.png"
-            alt="План тренировок"
-            className="w-[500px] h-[300px] rounded-3xl object-cover"
-            onClick={() => setIsModalOpen('exercises')}
-          />
-          <div className="font-yanone max-w-[500px] text-right">
-            <h3 className="font-yanone text-5xl mb-4">План тренировок</h3>
-            <p className="font-yanone text-2xl">
-              В этом разделе вы можете планировать свои тренировки. Записывая их как заметки по дням. Что помогает чётко знать что вам нужно делать в тот или иной день.
-            </p>
-            <Link
-              to="/plan"
-              className={`${theme === 'dark' ? 'bg-purple-600 hover:bg-[#1E1E1E] hover:border-purple-600' : 'bg-[#3440EB] hover:bg-white hover:border-[#3440EB] hover:text-black'} rounded-xl px-4 py-2 font-yanone text-xl transition-all border-2 border-transparent mt-4 inline-block text-white`}
-            >
-              Перейти
-            </Link>
-          </div>
-        </section>
-        <section className={`${theme === 'dark' ? 'bg-[#1E1E1E]' : 'bg-white shadow-md'} rounded-xl p-5 flex justify-between`}>
-          <div className="font-yanone max-w-[500px]">
-            <h3 className="font-yanone text-5xl mb-4">Упражнения</h3>
-            <p className="font-yanone text-2xl">
-              В этом разделе вы можете посмотреть видео ролики с упражнениями. И составить свой план тренировок. Это поможет качественно составить план для хорошего развития.
-            </p>
-            <Link
-              to="/exercises"
-              className={`${theme === 'dark' ? 'bg-purple-600 hover:bg-[#1E1E1E] hover:border-purple-600' : 'bg-[#3440EB] hover:bg-white hover:border-[#3440EB] hover:text-black'} rounded-xl px-4 py-2 font-yanone text-xl transition-all border-2 border-transparent mt-4 inline-block text-white`}
-            >
-              Перейти
-            </Link>
-          </div>
-          <img
-            src="/images/exer.jpg"
-            alt="Упражнения"
-            className="w-[500px] h-[300px] rounded-3xl object-cover"
-            onClick={() => setIsModalOpen('exercises')}
-          />
-        </section>
-        <section className={`${theme === 'dark' ? 'bg-[#1E1E1E]' : 'bg-white shadow-md'} rounded-xl p-5`}>
+        <section className={`${theme === 'dark' ? 'bg-[#0d0361] ' : 'bg-white shadow-md'} rounded-sm p-5`}>
           <div className="font-yanone text-2xl">
-            <p>Телефонный номер: +996708959969</p>
-            <p>Email: akmatalievbekmamat@gmail.com</p>
-            <p>Группа: ИСТ(б)-1-23</p>
-            <p>GitHub: inajin37</p>
+            <p>Телефонный номер: +996700000000</p>
+            <p>Email: xxxx@gmail.com</p>
+            <p>GitHub: xxxx</p>
           </div>
         </section>
         <Footer className="shadow-md" />

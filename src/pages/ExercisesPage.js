@@ -139,16 +139,16 @@ const ExercisesPage = ({ userId, setUserId }) => {
   };
 
   return (
-    <div className={`min-h-screen flex justify-center items-center ${theme === 'dark' ? 'bg-[#080808] text-white' : 'bg-gray-100 text-black'} font-yanone shadow-md`}>
+    <div className={`min-h-screen flex justify-center items-center ${theme === 'dark' ? 'bg-[#0e1426]  text-white' : 'bg-gray-100 text-black'} font-yanone shadow-md`}>
       <div className="w-full max-w-[1165px] flex flex-col gap-4 p-4">
         <Header userId={userId} setUserId={setUserId} />
         <div className="flex flex-wrap gap-2 justify-start">
           {exerciseList.map((exercise, index) => (
             <div
               key={index}
-              className={`${theme === 'dark' ? 'bg-[#1E1E1E]' : 'bg-white'} w-[220px] h-[400px] rounded-xl p-5 text-center shadow-md`}
+              className={`${theme === 'dark' ? 'bg-[#0d0361] ' : 'bg-white'} w-[220px] h-[400px] rounded-sm p-5 text-center shadow-md`}
             >
-              <div className="w-full h-[139px] rounded-xl overflow-hidden" style={{ aspectRatio: '4/3' }}>
+              <div className="w-full h-[139px] rounded-sm overflow-hidden" style={{ aspectRatio: '4/3' }}>
                 <img src={exercise.image} alt={exercise.title} className="w-full h-full object-cover object-center" />
               </div>
               <h3 className="h-[80px] text-xl mt-2">{exercise.title}</h3>
@@ -157,7 +157,7 @@ const ExercisesPage = ({ userId, setUserId }) => {
                 href={exercise.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`${theme === 'dark' ? 'bg-purple-600 hover:bg-[#1E1E1E]' : 'bg-[#3440EB] hover:text-black hover:bg-white hover:border-[#3440EB]'} rounded-xl px-4 py-2 text-white font-yanone text-xl transition-all border-2 border-transparent hover:border-purple-600 inline-block`}
+                className={`${theme === 'dark' ? 'bg-[#FFD700] hover:bg-[#0d0361] ' : 'bg-[#8f2429]  hover:text-black hover:bg-white hover:border-[#8f2429] '} rounded-sm px-4 py-2 text-white font-yanone text-xl transition-all border-2 border-transparent hover:border-[#FFD700] inline-block`}
               >
                 Перейти
               </a>
@@ -167,7 +167,7 @@ const ExercisesPage = ({ userId, setUserId }) => {
         <div className="flex justify-center">
           <button
             onClick={() => setIsModalOpen(true)}
-            className={`${theme === 'dark' ? 'bg-purple-600 hover:bg-[#1E1E1E]' : 'bg-[#3440EB] hover:text-black hover:bg-white hover:border-[#3440EB]'} rounded-xl px-4 py-2 text-white font-yanone text-xl transition-all border-2 border-transparent hover:border-purple-600 mt-4`}
+            className={`${theme === 'dark' ? 'bg-[#FFD700] hover:bg-[#0d0361] ' : 'bg-[#8f2429]  hover:text-black hover:bg-white hover:border-[#8f2429] '} rounded-sm px-4 py-2 text-white font-yanone text-xl transition-all border-2 border-transparent hover:border-[#FFD700]mt-4`}
           >
             Добавить упражнение
           </button>
@@ -175,7 +175,7 @@ const ExercisesPage = ({ userId, setUserId }) => {
 
         {isModalOpen && (
           <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-            <div className={`${theme === 'dark' ? 'bg-[#1E1E1E] text-white' : 'bg-white text-black'} rounded-xl p-6 w-[600px]`}>
+            <div className={`${theme === 'dark' ? 'bg-[#0d0361]  text-white' : 'bg-white text-black'} rounded-sm p-6 w-[600px]`}>
               <h3 className="text-2xl mb-4">Добавить новое упражнение</h3>
               <div className="flex flex-col gap-4">
                 <input
@@ -184,14 +184,14 @@ const ExercisesPage = ({ userId, setUserId }) => {
                   value={newExercise.title}
                   onChange={handleInputChange}
                   placeholder="Название упражнения"
-                  className={`${theme === 'dark' ? 'bg-[#1E1E1E] text-white border-purple-600 focus:border-purple-400' : 'bg-white text-black border-[#3440EB] focus:border-blue-700'} rounded-xl p-2 text-xl border-2 focus:ring-2 focus:ring-purple-600 w-full`}
+                  className={`${theme === 'dark' ? 'bg-[#0d0361]  text-white border-[#FFD700]focus:border-purple-400' : 'bg-white text-black border-[#8f2429]  focus:border-blue-700'} rounded-sm p-2 text-xl border-2 focus:ring-2 focus:ring-[#FFD700]w-full`}
                 />
                 <textarea
                   name="description"
                   value={newExercise.description}
                   onChange={handleInputChange}
                   placeholder="Описание упражнения"
-                  className={`${theme === 'dark' ? 'bg-[#1E1E1E] text-white border-purple-600 focus:border-purple-400' : 'bg-white text-black border-[#3440EB] focus:border-blue-700'} rounded-xl p-2 text-xl border-2 focus:ring-2 focus:ring-purple-600 w-full h-32 resize-none`}
+                  className={`${theme === 'dark' ? 'bg-[#0d0361]  text-white border-[#FFD700]focus:border-purple-400' : 'bg-white text-black border-[#8f2429]  focus:border-blue-700'} rounded-sm p-2 text-xl border-2 focus:ring-2 focus:ring-[#FFD700] w-full h-32 resize-none`}
                 />
                 <input
                   type="text"
@@ -199,7 +199,7 @@ const ExercisesPage = ({ userId, setUserId }) => {
                   value={newExercise.image}
                   onChange={handleInputChange}
                   placeholder="URL изображения"
-                  className={`${theme === 'dark' ? 'bg-[#1E1E1E] text-white border-purple-600 focus:border-purple-400' : 'bg-white text-black border-[#3440EB] focus:border-blue-700'} rounded-xl p-2 text-xl border-2 focus:ring-2 focus:ring-purple-600 w-full`}
+                  className={`${theme === 'dark' ? 'bg-[#0d0361]  text-white border-[#FFD700]focus:border-purple-400' : 'bg-white text-black border-[#8f2429]  focus:border-blue-700'} rounded-sm p-2 text-xl border-2 focus:ring-2 focus:ring-[#FFD700]w-full`}
                 />
                 {newExercise.image && (
                   <img
@@ -215,19 +215,19 @@ const ExercisesPage = ({ userId, setUserId }) => {
                   value={newExercise.link}
                   onChange={handleInputChange}
                   placeholder="Ссылка на видео"
-                  className={`${theme === 'dark' ? 'bg-[#1E1E1E] text-white border-purple-600 focus:border-purple-400' : 'bg-white text-black border-[#3440EB] focus:border-blue-700'} rounded-xl p-2 text-xl border-2 focus:ring-2 focus:ring-purple-600 w-full`}
+                  className={`${theme === 'dark' ? 'bg-[#0d0361]  text-white border-[#FFD700] focus:border-purple-400' : 'bg-white text-black border-[#8f2429]  focus:border-blue-700'} rounded-sm p-2 text-xl border-2 focus:ring-2 focus:ring-[#FFD700]w-full`}
                 />
               </div>
               <div className="flex gap-4 mt-4">
                 <button
                   onClick={addExercise}
-                  className={`${theme === 'dark' ? 'bg-purple-600 hover:bg-[#1E1E1E]' : 'bg-[#3440EB] hover:text-black hover:bg-white hover:border-[#3440EB]'} rounded-xl px-4 py-2 text-white transition-all border-2 border-transparent hover:border-purple-600 w-full text-xl`}
+                  className={`${theme === 'dark' ? 'bg-[#FFD700] hover:bg-[#0d0361] ' : 'bg-[#8f2429]  hover:text-black hover:bg-white hover:border-[#8f2429] '} rounded-sm px-4 py-2 text-white transition-all border-2 border-transparent hover:border-[#FFD700]w-full text-xl`}
                 >
                   Добавить
                 </button>
                 <button
                   onClick={() => setIsModalOpen(false)}
-                  className={`${theme === 'dark' ? 'bg-red-600 hover:bg-[#1E1E1E]' : 'bg-red-500 hover:text-black hover:bg-white hover:border-red-500'} rounded-xl px-4 py-2 text-white transition-all border-2 border-transparent hover:border-red-600 w-full text-xl`}
+                  className={`${theme === 'dark' ? 'bg-red-600 hover:bg-[#0d0361] ' : 'bg-red-500 hover:text-black hover:bg-white hover:border-red-500'} rounded-sm px-4 py-2 text-white transition-all border-2 border-transparent hover:border-red-600 w-full text-xl`}
                 >
                   Закрыть
                 </button>

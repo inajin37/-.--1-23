@@ -16,15 +16,15 @@ const Header = ({ showNav = true, userId, username, setUserId, setUsername }) =>
   };
 
   return (
-    <header className={`${theme === 'dark' ? 'bg-[#1E1E1E]' : 'bg-white'} rounded-xl p-4 flex justify-between items-center shadow-md`}>
-      <h1 className="font-anta text-4xl">fitPlanner</h1>
+    <header className={`${theme === 'dark' ? 'bg-[#0d0361] ' : 'bg-white'} rounded-sm p-4 flex justify-between items-center shadow-md`}>
+      <h1 className="font-mono  text-4xl">GYM Plan</h1>
       {showNav ? (
         <nav className="flex-1 flex justify-center">
           <ul className="font-yanone flex list-none gap-5 mt-0">
             <li>
               <Link
                 to="/"
-                className={`${theme === 'dark' ? 'text-purple-600 hover:text-purple-400 after:from-purple-600 after:to-purple-400 before:from-purple-600 before:to-purple-400' : 'text-[#3440EB] hover:[#3440EB] before:from-blue-600 before:to-blue-400 after:from-blue-600 after:to-blue-400'} text-xl relative transition-all after:content-[''] after:absolute after:w-full after:h-[2px] after:bg-gradient-to-r  after:bottom-[-5px] after:left-0 after:scale-x-0 after:origin-right after:transition-transform after:duration-300 hover:after:scale-x-100 before:content-[''] before:absolute before:w-full before:h-[2px] before:bg-gradient-to-r before:top-[-5px] before:left-0 before:scale-x-0 before:origin-left before:transition-transform before:duration-300 hover:before:scale-x-100`}
+                className={`${theme === 'dark' ? 'text-[#FFD700]hover:text-purple-400 after:from-[#FFD700] after:to-[#c7b70e] before:from-[#FFD700] before:to-[#c7b70e] ' : 'text-[#8f2429]   hover:[#8f2429]  before:from-[#ff0509] before:to-[#ff0509] after:from-[#ff0509] after:to-[#ff0509]'} text-xl relative transition-all after:content-[''] after:absolute after:w-full after:h-[2px] after:bg-gradient-to-r  after:bottom-[-5px] after:left-0 after:scale-x-0 after:origin-right after:transition-transform after:duration-300 hover:after:scale-x-100 before:content-[''] before:absolute before:w-full before:h-[2px] before:bg-gradient-to-r before:top-[-5px] before:left-0 before:scale-x-0 before:origin-left before:transition-transform before:duration-300 hover:before:scale-x-100`}
               >
                 Главная
               </Link>
@@ -32,7 +32,7 @@ const Header = ({ showNav = true, userId, username, setUserId, setUsername }) =>
             <li>
               <Link
                 to="/plan"
-                className={`${theme === 'dark' ? 'text-purple-600 hover:text-purple-400 after:from-purple-600 after:to-purple-400 before:from-purple-600 before:to-purple-400' : 'text-[#3440EB] hover:[#3440EB] before:from-blue-600 before:to-blue-400 after:from-blue-600 after:to-blue-400'} text-xl relative transition-all after:content-[''] after:absolute after:w-full after:h-[2px] after:bg-gradient-to-r  after:bottom-[-5px] after:left-0 after:scale-x-0 after:origin-right after:transition-transform after:duration-300 hover:after:scale-x-100 before:content-[''] before:absolute before:w-full before:h-[2px] before:bg-gradient-to-r before:top-[-5px] before:left-0 before:scale-x-0 before:origin-left before:transition-transform before:duration-300 hover:before:scale-x-100`}
+                className={`${theme === 'dark' ? 'text-[#FFD700]hover:text-purple-400 after:from-[#FFD700] after:to-[#c7b70e] before:from-[#FFD700] before:to-[#c7b70e] ' : 'text-[#8f2429]   hover:[#8f2429]  before:from-[#ff0509] before:to-[#ff0509] after:from-[#ff0509] after:to-[#ff0509]'} text-xl relative transition-all after:content-[''] after:absolute after:w-full after:h-[2px] after:bg-gradient-to-r  after:bottom-[-5px] after:left-0 after:scale-x-0 after:origin-right after:transition-transform after:duration-300 hover:after:scale-x-100 before:content-[''] before:absolute before:w-full before:h-[2px] before:bg-gradient-to-r before:top-[-5px] before:left-0 before:scale-x-0 before:origin-left before:transition-transform before:duration-300 hover:before:scale-x-100`}
               >
                 Тренировки
               </Link>
@@ -40,7 +40,7 @@ const Header = ({ showNav = true, userId, username, setUserId, setUsername }) =>
             <li>
               <Link
                 to="/calendar"
-                className={`${theme === 'dark' ? 'text-purple-600 hover:text-purple-400 after:from-purple-600 after:to-purple-400 before:from-purple-600 before:to-purple-400' : 'text-[#3440EB] hover:[#3440EB] before:from-blue-600 before:to-blue-400 after:from-blue-600 after:to-blue-400'} text-xl relative transition-all after:content-[''] after:absolute after:w-full after:h-[2px] after:bg-gradient-to-r  after:bottom-[-5px] after:left-0 after:scale-x-0 after:origin-right after:transition-transform after:duration-300 hover:after:scale-x-100 before:content-[''] before:absolute before:w-full before:h-[2px] before:bg-gradient-to-r before:top-[-5px] before:left-0 before:scale-x-0 before:origin-left before:transition-transform before:duration-300 hover:before:scale-x-100`}
+                className={`${theme === 'dark' ? 'text-[#FFD700]hover:text-purple-400 after:from-[#FFD700] after:to-[#c7b70e] before:from-[#FFD700] before:to-[#c7b70e] ' : 'text-[#8f2429]   hover:[#8f2429]  before:from-[#ff0509] before:to-[#ff0509] after:from-[#ff0509] after:to-[#ff0509]'} text-xl relative transition-all after:content-[''] after:absolute after:w-full after:h-[2px] after:bg-gradient-to-r  after:bottom-[-5px] after:left-0 after:scale-x-0 after:origin-right after:transition-transform after:duration-300 hover:after:scale-x-100 before:content-[''] before:absolute before:w-full before:h-[2px] before:bg-gradient-to-r before:top-[-5px] before:left-0 before:scale-x-0 before:origin-left before:transition-transform before:duration-300 hover:before:scale-x-100`}
               >
                 Календарь
               </Link>
@@ -48,7 +48,7 @@ const Header = ({ showNav = true, userId, username, setUserId, setUsername }) =>
             <li>
               <Link
                 to="/exercises"
-                className={`${theme === 'dark' ? 'text-purple-600 hover:text-purple-400 after:from-purple-600 after:to-purple-400 before:from-purple-600 before:to-purple-400' : 'text-[#3440EB] hover:[#3440EB] before:from-blue-600 before:to-blue-400 after:from-blue-600 after:to-blue-400'} text-xl relative transition-all after:content-[''] after:absolute after:w-full after:h-[2px] after:bg-gradient-to-r  after:bottom-[-5px] after:left-0 after:scale-x-0 after:origin-right after:transition-transform after:duration-300 hover:after:scale-x-100 before:content-[''] before:absolute before:w-full before:h-[2px] before:bg-gradient-to-r before:top-[-5px] before:left-0 before:scale-x-0 before:origin-left before:transition-transform before:duration-300 hover:before:scale-x-100`}
+                className={`${theme === 'dark' ? 'text-[#FFD700]hover:text-purple-400 after:from-[#FFD700] after:to-[#c7b70e] before:from-[#FFD700] before:to-[#c7b70e] ' : 'text-[#8f2429]   hover:[#8f2429]  before:from-[#ff0509] before:to-[#ff0509] after:from-[#ff0509] after:to-[#ff0509]'} text-xl relative transition-all after:content-[''] after:absolute after:w-full after:h-[2px] after:bg-gradient-to-r  after:bottom-[-5px] after:left-0 after:scale-x-0 after:origin-right after:transition-transform after:duration-300 hover:after:scale-x-100 before:content-[''] before:absolute before:w-full before:h-[2px] before:bg-gradient-to-r before:top-[-5px] before:left-0 before:scale-x-0 before:origin-left before:transition-transform before:duration-300 hover:before:scale-x-100`}
               >
                 Упражнения
               </Link>
@@ -59,13 +59,13 @@ const Header = ({ showNav = true, userId, username, setUserId, setUsername }) =>
         <div className="flex-1 flex justify-center gap-4">
           <Link
             to="/profile"
-            className={`${theme === 'dark' ? 'bg-purple-600 hover:bg-gray-800' : 'bg-purple-500 hover:bg-white'} rounded-xl px-4 py-2 text-white font-belanosima text-xl transition-all border-2 border-transparent hover:border-purple-600`}
+            className={`${theme === 'dark' ? 'bg-[#FFD700]hover:bg-gray-800' : 'bg-purple-500 hover:bg-white'} rounded-sm px-4 py-2 text-white font-belanosima text-xl transition-all border-2 border-transparent hover:border-[#FFD700]`}
           >
             {username || 'Профиль'}
           </Link>
           <button
             onClick={handleLogout}
-            className={`${theme === 'dark' ? 'bg-red-600 hover:bg-gray-800' : 'bg-red-500 hover:bg-white'} rounded-xl px-4 py-2 text-white font-belanosima text-xl transition-all border-2 border-transparent hover:border-red-600`}
+            className={`${theme === 'dark' ? 'bg-red-600 hover:bg-gray-800' : 'bg-red-500 hover:bg-white'} rounded-sm px-4 py-2 text-white font-belanosima text-xl transition-all border-2 border-transparent hover:border-red-600`}
           >
             Выйти
           </button>
@@ -74,7 +74,7 @@ const Header = ({ showNav = true, userId, username, setUserId, setUsername }) =>
         <div className="flex-1 flex justify-center">
           <Link
             to="/login"
-            className={`${theme === 'dark' ? 'bg-purple-600 hover:bg-gray-800' : 'bg-purple-500 hover:bg-white'} rounded-xl px-4 py-2 text-white font-belanosima text-xl transition-all border-2 border-transparent hover:border-purple-600`}
+            className={`${theme === 'dark' ? 'bg-[#FFD700]hover:bg-gray-800' : 'bg-purple-500 hover:bg-white'} rounded-sm px-4 py-2 text-white font-belanosima text-xl transition-all border-2 border-transparent hover:border-[#FFD700]`}
           >
             Вход
           </Link>
@@ -83,13 +83,13 @@ const Header = ({ showNav = true, userId, username, setUserId, setUsername }) =>
       <div className="flex items-center gap-4">
         <button
           onClick={toggleTheme}
-          className={`${theme === 'dark' ? 'bg-purple-600 hover:bg-[#1E1E1E] hover:border-purple-600' : 'bg-[#3440EB] hover:bg-white hover:border-[#3440EB] hover:text-black'} rounded-full w-12 h-12 flex items-center justify-center text-white font-belanosima text-xl transition-all border-2 border-transparent`}
+          className={`${theme === 'dark' ? 'bg-[#FFD700]hover:bg-[#0d0361]  hover:border-[#FFD700]' : 'bg-[#8f2429]  hover:bg-white hover:border-[#8f2429]  hover:text-black'} rounded-full w-12 h-12 flex items-center justify-center text-white font-belanosima text-xl transition-all border-2 border-transparent`}
         >
           {theme === 'dark' ? '☽' : '☀'}
         </button>
         <Link
           to="/profile"
-          className={`${theme === 'dark' ? 'bg-purple-600 hover:bg-[#1E1E1E] hover:border-purple-600' : 'bg-[#3440EB] hover:bg-white hover:border-[#3440EB] hover:text-black'} rounded-full w-12 h-12 flex items-center justify-center text-white font-belanosima text-xl transition-all border-2 border-transparent`}
+          className={`${theme === 'dark' ? 'bg-[#FFD700] hover:bg-[#0d0361]  hover:border-[#FFD700]' : 'bg-[#8f2429]  hover:bg-white hover:border-[#8f2429]  hover:text-black'} rounded-full w-12 h-12 flex items-center justify-center text-white font-belanosima text-xl transition-all border-2 border-transparent`}
         >
           {userId ? '👤' : '👤'}  
         </Link>

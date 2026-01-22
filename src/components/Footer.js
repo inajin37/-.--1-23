@@ -5,8 +5,8 @@ const Footer = () => {
   const { theme } = useContext(ThemeContext);
 
   return (
-    <footer className={`${theme === 'dark' ? 'bg-[#1E1E1E]' : 'bg-white'} rounded-xl p-4 text-center shadow-md`}>
-      <p className="font-bigshoulders text-xl">fitPlanner 2025</p>
+    <footer className={`${theme === 'dark' ? 'bg-[#0d0361] ' : 'bg-white'} rounded-sm p-4 text-center shadow-md`}>
+      <p className="font-bigshoulders text-xl">GYM Plan 2025</p>
     </footer>
   );
 };

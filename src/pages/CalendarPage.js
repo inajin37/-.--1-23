@@ -5,7 +5,7 @@ import Header from '../components/Header';
 import { ThemeContext } from '../context/ThemeContext';
 
 const CalendarPage = ({ userId, setUserId }) => {
-  const { theme, toggleTheme } = useContext(ThemeContext);
+  const { theme, toggleTheme  } = useContext(ThemeContext);
   const navigate = useNavigate();
   const [currentDate, setCurrentDate] = useState(new Date(2025, 4, 20, 0, 20));
   const [workoutDays, setWorkoutDays] = useState({});
@@ -46,7 +46,7 @@ const CalendarPage = ({ userId, setUserId }) => {
             <td
               key={`${i}-${j}`}
               className={`border p-2 w-[14%] ${
-                theme === 'dark' ? 'border-purple-600' : 'border-[#3440EB]'
+                theme === 'dark' ? 'border-[#FFD700]' : 'border-[#8f2429] '
               }`}
             ></td>
           );
@@ -57,14 +57,14 @@ const CalendarPage = ({ userId, setUserId }) => {
             <td
               key={`${i}-${j}`}
               className={`border p-2 w-[14%] text-center ${
-                theme === 'dark' ? 'border-purple-600' : 'border-[#3440EB]'
+                theme === 'dark' ? 'border-[#FFD700]' : 'border-[#8f2429] '
               }`}
             >
               {dayCounter}
               <label className="block my-1 text-sm">
                 <input
                   type="checkbox"
-                  className={`mr-1 ${theme === 'dark' ? 'accent-purple-600' : 'accent-[#3440EB]'}`}
+                  className={`mr-1 ${theme === 'dark' ? 'accent-[#FFD700]' : 'accent-[#8f2429] '}`}
                   checked={dayStatus.done}
                   onChange={(e) => {
                     const newStatus = { done: e.target.checked, notDone: false };
@@ -81,7 +81,7 @@ const CalendarPage = ({ userId, setUserId }) => {
               <label className="block my-1 text-sm">
                 <input
                   type="checkbox"
-                  className={`mr-1 ${theme === 'dark' ? 'accent-gray-600' : 'accent-[#3440EB]'}`}
+                  className={`mr-1 ${theme === 'dark' ? 'accent-gray-600' : 'accent-[#8f2429] '}`}
                   checked={dayStatus.notDone}
                   onChange={(e) => {
                     const newStatus = { done: false, notDone: e.target.checked };
@@ -114,14 +114,14 @@ const CalendarPage = ({ userId, setUserId }) => {
   };
 
   return (
-    <div className={`min-h-screen flex justify-center items-center ${theme === 'dark' ? 'bg-[#080808] text-white' : 'bg-gray-100 text-black'} font-yanone`}>
+    <div className={`min-h-screen flex justify-center items-center ${theme === 'dark' ? 'bg-[#0e1426]  text-white' : 'bg-gray-100 text-black'} font-yanone`}>
       <div className="w-full max-w-[1165px] flex flex-col gap-4 p-4">
         <Header userId={userId} setUserId={setUserId} />
-        <section className={`${theme === 'dark' ? 'bg-[#1E1E1E]' : 'bg-white'} rounded-xl p-4 flex flex-col items-center min-h-[600px] shadow-md`}>
+        <section className={`${theme === 'dark' ? 'bg-[#0d0361] ' : 'bg-white'} rounded-sm p-4 flex flex-col items-center min-h-[600px] shadow-md`}>
           <div className="flex justify-between w-full p-2 text-xl">
             <button
               onClick={handlePrevMonth}
-              className={`${theme === 'dark' ? 'bg-purple-600 hover:bg-[#1E1E1E]' : 'bg-[#3440EB] hover:text-black hover:bg-white hover:border-[#3440EB]'} rounded-xl px-2 py-1 text-white transition-all border-2 border-transparent hover:border-purple-600`}
+              className={`${theme === 'dark' ? 'bg-[#FFD700] hover:bg-[#0d0361] ' : 'bg-[#8f2429]  hover:text-black hover:bg-white hover:border-[#8f2429] '} rounded-sm px-2 py-1 text-white transition-all border-2 border-transparent hover:border-[#FFD700]`}
             >
               ◀
             </button>
@@ -130,14 +130,14 @@ const CalendarPage = ({ userId, setUserId }) => {
             </span>
             <button
               onClick={handleNextMonth}
-              className={`${theme === 'dark' ? 'bg-purple-600 hover:bg-[#1E1E1E]' : 'bg-[#3440EB] hover:text-black hover:bg-white hover:border-[#3440EB]'} rounded-xl px-2 py-1 text-white transition-all border-2 border-transparent hover:border-purple-600`}
+              className={`${theme === 'dark' ? 'bg-[#FFD700] hover:bg-[#0d0361] ' : 'bg-[#8f2429]  hover:text-black hover:bg-white hover:border-[#8f2429] '} rounded-sm px-2 py-1 text-white transition-all border-2 border-transparent hover:border-[#FFD700]`}
             >
               ▶
             </button>
           </div>
           <table
-            className={`border w-full border-collapse rounded-xl text-center ${
-              theme === 'dark' ? 'bg-[#1E1E1E] border-purple-600' : 'bg-gray-100 border-[#3440EB]'
+            className={`border w-full border-collapse rounded-sm text-center ${
+              theme === 'dark' ? 'bg-[#0d0361]  border-[#FFD700]' : 'bg-gray-100 border-[#8f2429] '
             }`}
           >
             <thead>
@@ -146,7 +146,7 @@ const CalendarPage = ({ userId, setUserId }) => {
                   <th
                     key={index}
                     className={`border p-2 w-[14%] ${
-                      theme === 'dark' ? 'border-purple-600' : 'border-[#3440EB]'
+                      theme === 'dark' ? 'border-[#FFD700]' : 'border-[#8f2429] '
                     }`}
                   >
                     {day}

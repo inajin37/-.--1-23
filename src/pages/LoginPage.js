@@ -32,22 +32,22 @@ const LoginPage = ({ setUserId, setUsername }) => {
   };
 
   return (
-    <div className={`min-h-screen flex justify-center items-center ${theme === 'dark' ? 'bg-[#080808] text-white' : 'bg-gray-100 text-black'} font-yanone`}>
-      <div className={`${theme === 'dark' ? 'bg-[#1E1E1E]' : 'bg-white'} rounded-xl p-5 w-[50vh] flex flex-col shadow-md`}>
+    <div className={`min-h-screen flex justify-center items-center ${theme === 'dark' ? 'bg-[#0e1426]  text-white' : 'bg-gray-100 text-black'} font-yanone`}>
+      <div className={`${theme === 'dark' ? 'bg-[#0d0361] ' : 'bg-white'} rounded-sm p-5 w-[50vh] flex flex-col shadow-md`}>
         <h1 className="text-4xl text-center mb-4">Вход</h1>
         <input
           type="text"
           placeholder="Имя пользователя"
           value={username}
           onChange={(e) => setUsernameInput(e.target.value)}
-          className={`${theme === 'dark' ? 'bg-[#1E1E1E] text-white border-gray-400 focus:border-purple-400' : 'bg-white text-black border-gray-300 focus:border-purple-500'} rounded-xl p-2 w-full h-[35px] mb-4 border focus:ring-2 focus:ring-purple-600`}
+          className={`${theme === 'dark' ? 'bg-[#0d0361]  text-white border-gray-400 focus:border-purple-400' : 'bg-white text-black border-gray-300 focus:border-purple-500'} rounded-sm p-2 w-full h-[35px] mb-4 border focus:ring-2 focus:ring-[#FFD700]`}
         />
         <input
           type="password"
           placeholder="Пароль"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          className={`${theme === 'dark' ? 'bg-[#1E1E1E] text-white border-gray-400 focus:border-purple-400' : 'bg-white text-black border-gray-300 focus:border-purple-500'} rounded-xl p-2 w-full h-[35px] mb-4 border focus:ring-2 focus:ring-purple-600`}
+          className={`${theme === 'dark' ? 'bg-[#0d0361]  text-white border-gray-400 focus:border-purple-400' : 'bg-white text-black border-gray-300 focus:border-purple-500'} rounded-sm p-2 w-full h-[35px] mb-4 border focus:ring-2 focus:ring-[#FFD700]`}
         />
         <label className="flex items-center mb-4 text-xl">
           <input type="checkbox" className="mr-2" />
@@ -56,13 +56,13 @@ const LoginPage = ({ setUserId, setUsername }) => {
         {error && <p className="text-red-500 text-center mb-4">{error}</p>}
         <button
           onClick={handleLogin}
-          className={`${theme === 'dark' ? 'bg-purple-600 hover:bg-[#1E1E1E]' : 'bg-[#3440EB] hover:text-black hover:bg-white hover:border-[#3440EB]'} rounded-xl px-4 py-2 text-white text-xl transition-all border-2 border-transparent hover:border-purple-600 w-[150px] mx-auto`}
+          className={`${theme === 'dark' ? 'bg-[#FFD700] hover:bg-[#0d0361] ' : 'bg-[#8f2429]  hover:text-black hover:bg-white hover:border-[#8f2429] '} rounded-sm px-4 py-2 text-white text-xl transition-all border-2 border-transparent hover:border-[#FFD700] w-[150px] mx-auto`}
         >
           Войти
         </button>
         <Link
           to="/signup"
-          className={`${theme === 'dark' ? 'text-purple-600 hover:text-purple-400' : 'text-[#3440EB] hover:text-blue-500'} text-xl text-center mt-4`}
+          className={`${theme === 'dark' ? 'text-[#FFD700] hover:text-[#f5f542]' : 'text-[#8f2429]  hover:text-blue-500'} text-xl text-center mt-4`}
         >
           У вас нет аккаунта? Регистрация
         </Link>
