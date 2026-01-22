@@ -250,3 +250,4 @@ styles/: Для стилей, включая Tailwind CSS.
 assets/: Для медиафайлов.
 hooks/: Для кастомной логики, связанной с состоянием.
 api/: Для работы с внешними API.# Gym-planner-
+# Gym-planner-
